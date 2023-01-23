@@ -7,10 +7,10 @@
 
 // Given an array of strings operations containing a list of operations, return the final value of X after performing all the operations.
 
-/**
- * @param {string[]} operations
- * @return {number}
- */
+// /**
+//  * @param {string[]} operations
+//  * @return {number}
+//  */
 var finalValueAfterOperations = function (operations) {
   let x = 0;
 
