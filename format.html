@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <ul>
+      <li>10</li>
+      <li>50</li>
+      <li>10</li>
+    </ul>
+    <div id="total"></div>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    function computeTotal() {
+      let total = 0;
+      $("li").each(function () {
+        total += parseInt($(this).text(), 10);
+      });
+      $("#total").text(`Total: ${total}`);
+    }
+    computeTotal();
+  });
+</script>
