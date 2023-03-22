@@ -8,21 +8,13 @@
 //  * @return {string}
 //  */
 
-let command = "G()(al)";
+// let command = "G()(al)";
+// let command = "G()()()()(al)";
+let command = "(al)G(al)()()G";
 
-var interpret = function (command) {
-  //   console.log(`command: ${command}`);
-
-  let interpretation = "";
-
-  for (let i = 0; i < command.length; i++) {
-    // console.log(`command: ${command[i]}`);
-
-    if (command[i] === "G") {
-      interpretation = "G";
-      console.log(`interpret: ${interpretation}`);
-    }
-  }
+const interpret = (command) => {
+  const interpretation = command.replace(/\(\)/g, "o").replace(/\(al\)/g, "al");
+  return interpretation;
 };
 
 interpret(command);
